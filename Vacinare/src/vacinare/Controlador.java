@@ -2,6 +2,7 @@
 package vacinare;
 
 import java.util.ArrayList;
+import java.io.*;
 
 public class Controlador {
     private ArrayList<Animal> arrayAnimal = new ArrayList<>();
@@ -55,6 +56,26 @@ public class Controlador {
 
     public void setDoenca(ArrayList<Doenca> arrayDoenca) {
         this.arrayDoenca = arrayDoenca;
+    }
+    
+    public void gerarRelatorioAnimais() {
+        try {
+            OutputStream os = new FileOutputStream("relatorio_animais.txt");
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            BufferedWriter file = new BufferedWriter(osw);
+            
+            if (!Controlador.getInstance().arrayAnimal.isEmpty()) {
+                file.write("                  Animais cadastrados");
+                file.newLine();
+                for (Animal animal : Controlador.getInstance().arrayAnimal) {
+                    file.write("Animal: " + animal.toString());
+                }
+            } else {
+                
+            }
+        } catch (Exception e) {
+            
+        }
     }
     
     private static Controlador instance = null;

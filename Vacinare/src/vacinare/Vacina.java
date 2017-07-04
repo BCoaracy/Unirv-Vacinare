@@ -11,6 +11,11 @@ public class Vacina {
         return vacina;
     }
 
+    @Override
+    public String toString() {
+        return "Nome da vacina = " + vacina + "\nTipo da vacina = " + tipoVacina + ", lote=" + lote + ", validade=" + validade + ", estoque=" + estoque + '}';
+    }
+
     public void setVacina(String vacina) {
         this.vacina = vacina;
     }

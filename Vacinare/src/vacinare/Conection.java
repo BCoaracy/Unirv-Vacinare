@@ -20,7 +20,7 @@ public class Conection {
     public static void main (String args[]) throws Exception {
 		
         Connection conn = criaConexao();
-		
+        
 	if (conn != null){
             System.out.println("Conexão realizada com sucesso" + conn);
             conn.close();

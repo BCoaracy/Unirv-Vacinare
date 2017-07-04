@@ -20,6 +20,11 @@ public class MenuRelatorio extends javax.swing.JInternalFrame {
         jLabel1.setText("Relatórios");
 
         jButton1.setText("Animais Vacinados");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Estoque de Vacina");
 
@@ -54,6 +59,11 @@ public class MenuRelatorio extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Controlador.getInstance().gerarRelatorioAnimais();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private static MenuRelatorio instance = null;
     public static MenuRelatorio getInstance() {

@@ -11,6 +11,12 @@ public class Animal {
     private int numero;
     private String raca;
     private char sexo;
+
+    @Override
+    public String toString() {
+        return "\nNúmero = " + numero + "\nRaça = " + raca + "\nSexo = " + sexo + "\nOrigem = " + origem + "\nIdade = " + idade + 
+                "\nPrenha = " + prenha + "\nTempo de Gestação = " + tempoPrenhes + "\nCausa da morte = " + causaMorte;
+    }
     private String origem;
     private int idade;
     private Boolean prenha;
