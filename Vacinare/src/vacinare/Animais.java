@@ -1,6 +1,4 @@
-
 package vacinare;
-
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -70,15 +68,14 @@ public class Animais {
 	
 	public Animais(int numero, String raca, char sexo, String origem, int idade, boolean prenha, int tempoPrenhes,
 			String causaMorte) {
-		setNumero(numero);
-		setRaca(raca);
-		setSexo(sexo);
-		setOrigem(origem);
-		setIdade(idade);
-		setPrenha(prenha);
-		setTempoPrenhes(tempoPrenhes);
-		setCausaMorte(causaMorte);
-                
+            setNumero(numero);
+            setRaca(raca);
+            setSexo(sexo);
+            setOrigem(origem);
+            setIdade(idade);
+            setPrenha(prenha);
+            setTempoPrenhes(tempoPrenhes);
+            setCausaMorte(causaMorte);    
 	}
         /*
         sql.executeQuery = ("INSERT INTO 'vacinacaobd'.'tbanimais'('idtbAnimais','Raca','Peso','Sexo','Origem',"
