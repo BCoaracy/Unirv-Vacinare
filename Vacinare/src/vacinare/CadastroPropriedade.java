@@ -1,7 +1,7 @@
 package vacinare;
 
-public class CadastroPropriedades extends javax.swing.JInternalFrame {
-    public CadastroPropriedades() {
+public class CadastroPropriedade extends javax.swing.JInternalFrame {
+    public CadastroPropriedade() {
         initComponents();
     }
 
@@ -96,10 +96,10 @@ public class CadastroPropriedades extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private static CadastroPropriedades instance = null;
-    public static CadastroPropriedades getInstance() {
+    private static CadastroPropriedade instance = null;
+    public static CadastroPropriedade getInstance() {
         if (instance == null) {
-            instance = new CadastroPropriedades();
+            instance = new CadastroPropriedade();
             TelaPrincipal.getInstance().getDesktop().add(instance);
         }
         return instance;

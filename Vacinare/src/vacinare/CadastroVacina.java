@@ -9,12 +9,12 @@ package vacinare;
  *
  * @author Her0il
  */
-public class CadastroVacinas extends javax.swing.JInternalFrame {
+public class CadastroVacina extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form CadastroVacinas
      */
-    public CadastroVacinas() {
+    public CadastroVacina() {
         initComponents();
     }
 
@@ -139,10 +139,10 @@ public class CadastroVacinas extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField1ActionPerformed
     
-    private static CadastroVacinas instance = null;
-    public static CadastroVacinas getInstance() {
+    private static CadastroVacina instance = null;
+    public static CadastroVacina getInstance() {
         if (instance == null) {
-            instance = new CadastroVacinas();
+            instance = new CadastroVacina();
             TelaPrincipal.getInstance().getDesktop().add(instance);
         }
         return instance;

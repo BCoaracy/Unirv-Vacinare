@@ -7,28 +7,31 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
-public class Animais {
+public class Animal {
     private int numero;
-	private String raca;
-	private char sexo;
-	private String origem;
-	private int idade;
-	private boolean prenha;
-	private int tempoPrenhes;
-	private String causaMorte;
+    private String raca;
+    private char sexo;
+    private String origem;
+    private int idade;
+    private Boolean prenha;
+    private int tempoPrenhes;
+    private String causaMorte;
 	
-	public int getNumero() {
-		return numero;
-	}
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-	public String getRaca() {
-		return raca;
-	}
-	public void setRaca(String raca) {
-		this.raca = raca;
-	}
+    public int getNumero() {
+	return numero;
+    }
+    
+    public void setNumero(int numero) {
+    	this.numero = numero;
+    }
+	
+    public String getRaca() {
+	return raca;
+    }
+
+    public void setRaca(String raca) {
+	this.raca = raca;
+    }
 	public char getSexo() {
 		return sexo;
 	}
@@ -50,7 +53,7 @@ public class Animais {
 	public boolean isPrenha() {
 		return prenha;
 	}
-	public void setPrenha(boolean prenha) {
+	public void setPrenha(Boolean prenha) {
 		this.prenha = prenha;
 	}
 	public int getTempoPrenhes() {
@@ -66,7 +69,7 @@ public class Animais {
 		this.causaMorte = causaMorte;
 	}
 	
-	public Animais(int numero, String raca, char sexo, String origem, int idade, boolean prenha, int tempoPrenhes,
+	/*public Animal(int numero, String raca, char sexo, String origem, int idade, boolean prenha, int tempoPrenhes,
 			String causaMorte) {
             setNumero(numero);
             setRaca(raca);
@@ -76,7 +79,7 @@ public class Animais {
             setPrenha(prenha);
             setTempoPrenhes(tempoPrenhes);
             setCausaMorte(causaMorte);    
-	}
+	}*/
         /*
         sql.executeQuery = ("INSERT INTO 'vacinacaobd'.'tbanimais'('idtbAnimais','Raca','Peso','Sexo','Origem',"
                 + "'Idade','Prenha','TempoPrenhes','CausaMorte','Numero')";
@@ -91,4 +94,8 @@ VALUES
 <{TempoPrenhes: }>,
 <{CausaMorte: }>,
 <{Numero: }>);*/
+
+    void setSexo(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

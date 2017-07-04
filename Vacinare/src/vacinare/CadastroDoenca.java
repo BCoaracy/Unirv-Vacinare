@@ -1,7 +1,7 @@
 package vacinare;
 
-public class CadastroDoencas extends javax.swing.JInternalFrame {
-    public CadastroDoencas() {
+public class CadastroDoenca extends javax.swing.JInternalFrame {
+    public CadastroDoenca() {
         initComponents();
     }
 
@@ -85,10 +85,10 @@ public class CadastroDoencas extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private static CadastroDoencas instance = null;
-    public static CadastroDoencas getInstance() {
+    private static CadastroDoenca instance = null;
+    public static CadastroDoenca getInstance() {
         if (instance == null) {
-            instance = new CadastroDoencas();
+            instance = new CadastroDoenca();
             TelaPrincipal.getInstance().getDesktop().add(instance);
         }
 
