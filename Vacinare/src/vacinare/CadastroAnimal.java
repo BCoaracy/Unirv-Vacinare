@@ -201,9 +201,21 @@ public class CadastroAnimal extends javax.swing.JInternalFrame {
         
         Controlador.getInstance().adicionar(animal);
         JOptionPane.showMessageDialog(TelaPrincipal.getInstance(), "Animal cadastrado com sucesso!");
+        instance.limparCampos();
     }//GEN-LAST:event_jButton1ActionPerformed
     
-    
+    private void limparCampos() {
+        num.setText("");
+        raca.setText("");
+        masculino.setSelected(false);
+        feminino.setSelected(false);
+        origem.setText("");
+        idade.setText("");
+        sim.setSelected(false);
+        nao.setSelected(false);
+        prenhes.setText("");
+        causa.setText("");
+    }
     
     private static CadastroAnimal instance = null;
     public static CadastroAnimal getInstance() {
@@ -211,6 +223,7 @@ public class CadastroAnimal extends javax.swing.JInternalFrame {
             instance = new CadastroAnimal();
             TelaPrincipal.getInstance().getDesktop().add(instance);
         }
+        instance.limparCampos();
         return instance;
     }
 
