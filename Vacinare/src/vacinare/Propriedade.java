@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vacinare;
 
-/**
- *
- * @author Bruno
- */
-public class Propriedades {
+public class Propriedade {
     String nome;
-    String propriedade;
+    String dono;
     int rebanho;
     String municipio;
     String estado;
@@ -24,12 +15,12 @@ public class Propriedades {
         this.nome = nome;
     }
 
-    public String getPropriedade() {
-        return propriedade;
+    public String getDono() {
+        return dono;
     }
 
-    public void setPropriedade(String propriedade) {
-        this.propriedade = propriedade;
+    public void setDono(String dono) {
+        this.dono = dono;
     }
 
     public int getRebanho() {
@@ -55,5 +46,4 @@ public class Propriedades {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
 }

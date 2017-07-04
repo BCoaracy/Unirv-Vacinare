@@ -112,22 +112,32 @@ public class CadastroPropriedade extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Propriedade propriedade = new Propriedade();
-        propriedade.setNome();
-        propriedade.setDono();
-        propriedade.setRebanho();
-        propriedade.setMunicipio();
-        propriedade.setEstado();
+        propriedade.setNome(nome.getText());
+        propriedade.setDono(dono.getText());
+        propriedade.setRebanho(Integer.valueOf(rebanho.getText()));
+        propriedade.setMunicipio(municipio.getText());
+        propriedade.setEstado(estado.getText());
         
         Controlador.getInstance().adicionar(propriedade);
         JOptionPane.showMessageDialog(TelaPrincipal.getInstance(), "Propriedade cadastrado com sucesso!");
+        instance.limparCampos();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void limparCampos() {
+        nome.setText("");
+        dono.setText("");
+        rebanho.setText("");
+        municipio.setText("");
+        estado.setText("");
+    }
+    
     private static CadastroPropriedade instance = null;
     public static CadastroPropriedade getInstance() {
         if (instance == null) {
             instance = new CadastroPropriedade();
             TelaPrincipal.getInstance().getDesktop().add(instance);
         }
+        instance.limparCampos();
         return instance;
     }
     
