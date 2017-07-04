@@ -1,6 +1,7 @@
 package vacinare;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 public class CadastroAnimal extends javax.swing.JInternalFrame {
     public CadastroAnimal() {
@@ -198,7 +199,8 @@ public class CadastroAnimal extends javax.swing.JInternalFrame {
         animal.setTempoPrenhes(Integer.parseInt(prenhes.getText()));
         animal.setCausaMorte(causa.getText());
         
-        
+        Controlador.getInstance().adicionar(animal);
+        JOptionPane.showMessageDialog(TelaPrincipal.getInstance(), "Animal cadastrado com sucesso!");
     }//GEN-LAST:event_jButton1ActionPerformed
     
     

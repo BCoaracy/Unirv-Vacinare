@@ -21,8 +21,7 @@ public class AnimalCellRenderer extends DefaultListCellRenderer {
             if(selecionado instanceof Animal){
                 Animal animal = (Animal) selecionado;
                 System.out.println(selecionado);
-                //System.out.println(aluno.getEscola().getNome());
-                setText(animal.getNumero() + " " + animal.getRaca());
+                setText(String.valueOf(animal.getNumero()));
             }else if(selecionado == null){
                 setText("Selecione...");
             }
