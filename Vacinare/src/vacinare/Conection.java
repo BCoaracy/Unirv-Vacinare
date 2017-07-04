@@ -14,7 +14,7 @@ import java.sql.DriverManager;
  */
 public class Conection {
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-	private static final String URL = "jdbc:mysql://localhost:3306/livros";
+	private static final String URL = "jdbc:mysql://localhost:3306/vacinacaobd";
 	private static final String USUARIO = "root";
 	private static final String SENHA = "";
 	
