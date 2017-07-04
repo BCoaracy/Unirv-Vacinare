@@ -68,7 +68,22 @@ public class Controlador {
                 file.write("                  Animais cadastrados");
                 file.newLine();
                 for (Animal animal : Controlador.getInstance().arrayAnimal) {
-                    file.write("Animal: " + animal.toString());
+                    file.write("Animal: ");
+                    file.newLine();
+                    file.write("Numero =  " +animal.getNumero());
+                    file.newLine();
+                    file.write("Raça = " + animal.getRaca());
+                    file.newLine();
+                    file.write("Sexo = " + animal.getSexo());
+                    file.newLine();
+                    file.write("Idade = " + animal.getIdade());
+                    file.newLine();
+                    file.write("Prenha = " + animal.isPrenha());
+                    file.newLine();
+                    file.write("Tempo de gestação = " + animal.getTempoPrenhes());
+                    file.newLine();
+                    file.write("Vacinado = " + animal.getVacinado());
+                    file.newLine();
                 }
             } else {
                 file.write("Não possui nenhum animal cadastrado!");
@@ -89,9 +104,11 @@ public class Controlador {
                 file.write("                  Vacinas cadastradas");
                 file.newLine();
                 for (Vacina vacina : Controlador.getInstance().arrayVacina) {
-                    file.write("Vacina: " + vacina.toString());
+                    file.write("Vacina: ");
                     file.newLine();
+                    file.write("Nome = " + vacina.getVacina());
                     file.newLine();
+                    file.write("Quantidade em estoque = " + vacina.getEstoque());
                 }
             } else {
                 file.write("Não possui nenhuma vacina!");
@@ -112,7 +129,13 @@ public class Controlador {
                 file.write("                  Animais cadastrados");
                 file.newLine();
                 for (Animal animal : Controlador.getInstance().arrayAnimal) {
-                    file.write("Animal: " + animal.toString());
+                    file.write("Animal: ");
+                    if (animal.getVacinado()) {
+                        file.newLine();
+                        file.write("Numero = " + animal.getNumero());
+                        file.newLine();
+                        file.write("Vacinado = " + animal.getVacinado());
+                    }
                 }
             } else {
                 file.write("Não possui nenhum animal cadastrado!");
