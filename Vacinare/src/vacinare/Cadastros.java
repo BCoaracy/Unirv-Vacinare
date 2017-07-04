@@ -15,7 +15,6 @@ public class Cadastros extends javax.swing.JInternalFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
         setClosable(true);
@@ -30,14 +29,16 @@ public class Cadastros extends javax.swing.JInternalFrame {
         });
 
         jButton2.setText("Vacinas");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Doenças");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel2.setText("Cadastros");
-
-        jButton4.setText("Ocorrencias");
-        jButton4.setToolTipText("");
 
         jButton5.setText("Propriedades");
         jButton5.setToolTipText("");
@@ -52,7 +53,6 @@ public class Cadastros extends javax.swing.JInternalFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jLabel2)
                         .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addComponent(jButton4)
                     .addComponent(jButton5)
                     .addComponent(jButton3)
                     .addComponent(jButton2))
@@ -69,11 +69,9 @@ public class Cadastros extends javax.swing.JInternalFrame {
                 .addComponent(jButton2)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         pack();
@@ -83,6 +81,10 @@ public class Cadastros extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         CadastroAnimal.getInstance().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private static Cadastros instance = null;
     public static Cadastros getInstance() {
@@ -97,7 +99,6 @@ public class Cadastros extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
