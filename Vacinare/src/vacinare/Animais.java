@@ -80,7 +80,7 @@ public class Animais {
 		setCausaMorte(causaMorte);
                 
 	}
-        
+        /*
         sql.executeQuery = ("INSERT INTO 'vacinacaobd'.'tbanimais'('idtbAnimais','Raca','Peso','Sexo','Origem',"
                 + "'Idade','Prenha','TempoPrenhes','CausaMorte','Numero')";
 VALUES
@@ -93,5 +93,5 @@ VALUES
 <{Prenha: }>,
 <{TempoPrenhes: }>,
 <{CausaMorte: }>,
-<{Numero: }>);
+<{Numero: }>);*/
 }
