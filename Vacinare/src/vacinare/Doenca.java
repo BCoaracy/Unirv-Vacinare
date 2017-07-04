@@ -37,4 +37,9 @@ public class Doenca {
     public void setVacina(Vacina vacina) {
         this.vacina = vacina;
     }
+
+    @Override
+    public String toString() {
+        return "\nNome = " + nome + "\nVacina a ser aplicada = " + vacina + "\nSintomas = " + sintomas + "\nCampanha = " + campanha;
+    }
 }

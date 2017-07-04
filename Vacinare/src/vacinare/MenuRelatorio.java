@@ -27,8 +27,18 @@ public class MenuRelatorio extends javax.swing.JInternalFrame {
         });
 
         jButton2.setText("Estoque de Vacina");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Rebanho Vacinado");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -64,6 +74,16 @@ public class MenuRelatorio extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         Controlador.getInstance().gerarRelatorioAnimais();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Controlador.getInstance().gerarRelatorioVacinas();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Controlador.getInstance().gerarRelatorioRebanho();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     private static MenuRelatorio instance = null;
     public static MenuRelatorio getInstance() {

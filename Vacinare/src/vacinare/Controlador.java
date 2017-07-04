@@ -71,10 +71,55 @@ public class Controlador {
                     file.write("Animal: " + animal.toString());
                 }
             } else {
-                
+                file.write("Não possui nenhum animal cadastrado!");
             }
+            file.close();
         } catch (Exception e) {
+            System.out.println("Não foi possivel gerar o relatório!");
+        }
+    }
+    
+    public void gerarRelatorioVacinas() {
+        try {
+            OutputStream os = new FileOutputStream("relatorio_animais.txt");
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            BufferedWriter file = new BufferedWriter(osw);
             
+            if (!Controlador.getInstance().arrayVacina.isEmpty()) {
+                file.write("                  Vacinas cadastradas");
+                file.newLine();
+                for (Vacina vacina : Controlador.getInstance().arrayVacina) {
+                    file.write("Vacina: " + vacina.toString());
+                    file.newLine();
+                    file.newLine();
+                }
+            } else {
+                file.write("Não possui nenhuma vacina!");
+            }
+            file.close();
+        } catch (Exception e) {
+            System.out.println("Não foi possível gerar o relatório!");
+        }
+    }
+    
+    public void gerarRelatorioRebanho() {
+        try {
+            OutputStream os = new FileOutputStream("relatorio_rebanho_vacinado.txt");
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            BufferedWriter file = new BufferedWriter(osw);
+            
+            if (!Controlador.getInstance().arrayAnimal.isEmpty()) {
+                file.write("                  Animais cadastrados");
+                file.newLine();
+                for (Animal animal : Controlador.getInstance().arrayAnimal) {
+                    file.write("Animal: " + animal.toString());
+                }
+            } else {
+                file.write("Não possui nenhum animal cadastrado!");
+            }
+            file.close();
+        } catch (Exception e) {
+            System.out.println("Não foi possível gerar o relatório!");
         }
     }
     

@@ -30,7 +30,8 @@ public class CadastroAnimal extends javax.swing.JInternalFrame {
         sim = new javax.swing.JRadioButton();
         nao = new javax.swing.JRadioButton();
         jLabel8 = new javax.swing.JLabel();
-        causa = new javax.swing.JTextField();
+        sim1 = new javax.swing.JRadioButton();
+        nao1 = new javax.swing.JRadioButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -76,55 +77,57 @@ public class CadastroAnimal extends javax.swing.JInternalFrame {
 
         nao.setText("Não");
 
-        jLabel8.setText("Causa da morte:");
+        jLabel8.setText("Vacinado");
+
+        sim1.setText("Sim");
+
+        nao1.setText("Não");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(51, 51, 51)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
+                        .addComponent(jLabel6)
+                        .addGap(70, 70, 70)
+                        .addComponent(sim)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nao))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
+                        .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(num)
+                            .addComponent(raca)
+                            .addComponent(origem)
+                            .addComponent(idade, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel8))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(sim)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(nao))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(causa))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
-                                .addGap(21, 21, 21)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(num)
-                                    .addComponent(raca)
-                                    .addComponent(origem)
-                                    .addComponent(idade, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(feminino)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(masculino))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
+                                .addComponent(feminino)
                                 .addGap(18, 18, 18)
-                                .addComponent(prenhes, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(masculino))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(jButton1)))
+                        .addComponent(jLabel7)
+                        .addGap(18, 18, 18)
+                        .addComponent(prenhes, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(51, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(sim1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nao1))
+                    .addComponent(jButton1))
+                .addGap(166, 166, 166))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,7 +165,9 @@ public class CadastroAnimal extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(causa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(sim1)
+                        .addComponent(nao1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(17, 17, 17))
@@ -197,7 +202,11 @@ public class CadastroAnimal extends javax.swing.JInternalFrame {
             animal.setPrenha(false);
         }
         animal.setTempoPrenhes(Integer.parseInt(prenhes.getText()));
-        animal.setCausaMorte(causa.getText());
+        if (sim1.isSelected()) {
+            animal.setVacinado(true);
+        } else {
+            animal.setVacinado(false);
+        }
         
         Controlador.getInstance().adicionar(animal);
         JOptionPane.showMessageDialog(TelaPrincipal.getInstance(), "Animal cadastrado com sucesso!");
@@ -214,7 +223,8 @@ public class CadastroAnimal extends javax.swing.JInternalFrame {
         sim.setSelected(false);
         nao.setSelected(false);
         prenhes.setText("");
-        causa.setText("");
+        sim1.setSelected(false);
+        nao1.setSelected(false);
     }
     
     private static CadastroAnimal instance = null;
@@ -228,7 +238,6 @@ public class CadastroAnimal extends javax.swing.JInternalFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField causa;
     private javax.swing.JRadioButton feminino;
     private javax.swing.JTextField idade;
     private javax.swing.JButton jButton1;
@@ -242,10 +251,12 @@ public class CadastroAnimal extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JRadioButton masculino;
     private javax.swing.JRadioButton nao;
+    private javax.swing.JRadioButton nao1;
     private javax.swing.JTextField num;
     private javax.swing.JTextField origem;
     private javax.swing.JTextField prenhes;
     private javax.swing.JTextField raca;
     private javax.swing.JRadioButton sim;
+    private javax.swing.JRadioButton sim1;
     // End of variables declaration//GEN-END:variables
 }

@@ -13,7 +13,7 @@ public class Vacina {
 
     @Override
     public String toString() {
-        return "Nome da vacina = " + vacina + "\nTipo da vacina = " + tipoVacina + ", lote=" + lote + ", validade=" + validade + ", estoque=" + estoque + '}';
+        return "Nome da vacina = " + vacina + "\nQuantidade em estoque = " + estoque;
     }
 
     public void setVacina(String vacina) {

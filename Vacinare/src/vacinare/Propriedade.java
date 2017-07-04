@@ -46,4 +46,10 @@ public class Propriedade {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+    
+    @Override
+    public String toString() {
+        return "Nome da propriedade = " + nome + "\nNome do dono = " + dono + "\nRebanho = " + rebanho + "\nuMucipio = " + municipio + 
+                "\nEstado = " + estado;
+    }
 }
